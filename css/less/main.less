@@ -1,62 +1,76 @@
 :root {
-	--clr-base: #000;
-	--clr-att: #f00;
-
-	--min: 320px;
-	--max: 1200px;
-
-	font-size: 10px;
-}
-.sl-wrap~.sl-wrap {
-	display: none;
-}
-.elm-hidden {
-	display: none;
+    --clr-base: #000;
+    --clr-title: #1B1B1B;
+    --clr-att: #E51E36;
+    --clr-att-light: #FFE9EB;
+    --clr-att-active: #FFC0C6;
+    --clr-light: #3D5165;
+    --clr-border: #e8e8e8;
 }
 /* ----------------------------------- *\
 			main styles
 \* ----------------------------------- */
-body {
-	color: var(--clr-base, #000);
-	background: #fff;
-}
-p, ul, ol {
-	position: relative;
-	img {
-		max-width: 100%;
-	}
-	&:last-child {
-		margin-bottom: 0 !important;
-	}
-}
-
-li {
-	position: relative;
-}
-a {
-	text-decoration: none;
-	color: var(--clr-att, #f00);
-	&:hover {
-		text-decoration: none;
-		color: var(--clr-att, #f00);
-	}
-}
-a.link-main, .link-main {
-	text-decoration: none;
-	border-bottom: 1px solid;
-	&:hover {
-		border-bottom: none;
-	}
-}
-h1, .h1-title,
-h2, .h2-title,
-h3, .h3-title,
-h4, .h4-title,
-h5, .h5-title,
-h6, .h6-title {
-	display: block;
-	position: relative;
-    &:first-child {
-        margin-top: 0;
+.container-page-wrap {
+    font-size: 14px;
+    line-height: (19/14);
+    background: #F7F8F9;
+    width: 100%;
+    min-width: 1000px;
+    p, ul, ol, table {
+        margin-bottom: (19/14em);
+        padding: 0;
+        list-style-type: none;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    li {
+        list-style-type: none;
+    }
+    .h1-title {
+        font-size: 34px;
+        line-height: (46/34);
+        font-weight: bold;
+        margin: 0 0 28px 0;
+    }
+    .h2-title {
+        font-size: 24px;
+        line-height: (33/24);
+        font-weight: bold;
+        margin: 30px 0 15px 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .title-decor {
+        display: inline;
+        border-bottom: 1px solid var(--clr-att);
+    }
+    .title-info {
+        display: inline;
+        vertical-align: top;
+        font-size: (15/24em);
+        line-height: (20/15);
+        letter-spacing: 0.3px;
+        color: var(--clr-light);
+        font-weight: 400;
+    }
+    * {
+        font-family: 'Open Sans', sans-serif;
+    }
+    a {
+        transition: all ease 0.2s;
+        &:not(.content-button) {
+            text-decoration: none;
+            color: var(--clr-att);
+            &:hover {
+                text-decoration: none;
+                color: var(--clr-att-active);
+            }
+        }
+    }
+    .link-main {
+        display: inline;
+        border-bottom: 1px solid;
     }
 }
